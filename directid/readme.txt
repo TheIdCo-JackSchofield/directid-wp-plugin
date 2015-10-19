@@ -12,6 +12,7 @@ It is also capable of loading into template errors by using the 'directid_widget
 1. Create a new directory on your site '/wp-content/plugins/directid'
 1. Upload the contents of this folder to the '/wp-content/plugins/directid' directory
 1. Edit oAuthManager.php to contain the secret key and client ID provided by your miiCard account manager
+1. Edit apiManager.php to contain the user session endpoint provided by your miiCard account manager
 1. Activate the plugin
 1. Add [directid-widget] to the post/page where you want the widget to appear
 1. Altertnatively add <?php do_action('directid_widget'); ?> to you template where you want the widget to appear
