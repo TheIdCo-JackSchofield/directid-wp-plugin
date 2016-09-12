@@ -10,22 +10,22 @@ It is also capable of loading into template errors by using the 'directid_widget
 
 == Installation ==
 1. Create a new directory on your site '/wp-content/plugins/directid'
-1. Upload the contents of this folder to the '/wp-content/plugins/directid' directory
-1. Edit oAuthManager.php to contain the secret key and client ID provided by your miiCard account manager
-1. Edit apiManager.php to contain the user session endpoint provided by your miiCard account manager
-1. Activate the plugin
-1. Add [directid-widget] to the post/page where you want the widget to appear
-1. Altertnatively add <?php do_action('directid_widget'); ?> to you template where you want the widget to appear
 
-== Frequently Asked Questions ==
-= How do I switch from Beta to Live? =
-Presently you will need to do the following:
+2. Upload the contents of this folder to the '/wp-content/plugins/directid' directory
 
-1. Update $apiRoot in apiManager.php  
-1. Update $oAuthResource in oAuthMangager.php
-1. Update the enqueued javascript and CSS files in directid.php
+3. In your `wp_config.php` file, add the line "define('DID_KEY', 'YOUR_ENCRYPTION_KEY');", where `YOUR_ENCRYPTION_KEY` is a randomly generated 64-character hexadecimal string. This will be used to encrypt your DirectID Secret Key when it is saved. This protects your secret key should your WordPress installation become compromised.
 
-This will be improved in future versions by providing a simple toggle in the plugins options page.
+4. In your WordPress dashboard, activate the plugin.
 
-= How do I add real users? =
-You will need to set the $user in apiManager.php to your desired identifier. This must be an escaped string.
+5. In your WordPress dashboard, go to Settings -> DirectID Widget Settings
+
+6. Enter and save the details provided by your account manager (Client ID, Secret Key, Company Name, API Root, OAuth Resource, CDN Path). Note that the Secret Key field will become empty after clicking 'save'.
+
+7. Add [directid-widget] to the post/page where you want the widget to appear. Alternatively add <?php do_action('directid_widget'); ?> to your template where you want the widget to appear.
+
+== URL Parameters ==
+* didToken
+Used to provide a pre-generated user session token (eg if the user has clicked on a link in an email to arrive at this page). Without this parameter, the token will be generated automatically based on the Client ID and Secret Key you entered in the DirectID Widget Settings. 
+
+* didCustomerReference
+Used to provide your identifying Customer Reference for the user; if not provided the Customer Reference will be "defaultuser". This reference will be displayed on the DirectID Dashboard or via the API when the individual's data is returned.

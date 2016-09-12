@@ -1,4 +1,4 @@
 #DirectID Widget Plugin
-This widget provides a simple method to intergrate the DirectID widget into your Wordpress site.
+This widget provides a simple method to integrate the DirectID widget into your WordPress site.
 
-Please follow the installtion instructions in directid/readme.txt
+Please follow the installation instructions in directid/readme.txt
