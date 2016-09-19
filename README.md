@@ -25,8 +25,10 @@ It is also capable of loading into template errors by using the 'directid_widget
 7. Add [directid-widget] to the post/page where you want the widget to appear. Alternatively add <?php do_action('directid_widget'); ?> to your template where you want the widget to appear.
 
 ##URL Parameters
-* didToken
+###didToken
+
 Used to provide a pre-generated user session token (eg if the user has clicked on a link in an email to arrive at this page). Without this parameter, the token will be generated automatically based on the Client ID and Secret Key you entered in the DirectID Widget Settings. 
 
-* didCustomerReference
+###didCustomerReference
+
 Used to provide your identifying Customer Reference for the user; if not provided the Customer Reference will be "defaultuser". This reference will be displayed on the DirectID Dashboard or via the API when the individual's data is returned.
