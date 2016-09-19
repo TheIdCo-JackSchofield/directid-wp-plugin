@@ -1,15 +1,15 @@
 #DirectID Widget Plugin
 This widget provides a simple method to integrate the DirectID widget into your WordPress site.
 
-== Description ==
+##Description
 This plugin initializes the DirectID Widget in posts and pages containing the [directid-widget] tag.
 
 It is also capable of loading into template errors by using the 'directid_widget' action.
 
-== Dependencies ==
+##Dependencies
 * *mycrypt* 
 
-== Installation ==
+##Installation
 1. Create a new directory on your site '/wp-content/plugins/directid'
 
 2. Upload the contents of this folder to the '/wp-content/plugins/directid' directory
@@ -24,7 +24,7 @@ It is also capable of loading into template errors by using the 'directid_widget
 
 7. Add [directid-widget] to the post/page where you want the widget to appear. Alternatively add <?php do_action('directid_widget'); ?> to your template where you want the widget to appear.
 
-== URL Parameters ==
+##URL Parameters
 * didToken
 Used to provide a pre-generated user session token (eg if the user has clicked on a link in an email to arrive at this page). Without this parameter, the token will be generated automatically based on the Client ID and Secret Key you entered in the DirectID Widget Settings. 
 
